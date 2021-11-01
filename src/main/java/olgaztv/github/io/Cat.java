@@ -1,42 +1,98 @@
 package olgaztv.github.io;
 
 public class Cat {
-    int age = 5;
-    int year = 2020;
-    int date = 5;
-    String month = "Октябрь";
-    String name = "Варвара";
-    String breed = "Аббисинская";
-    float weight = 4.01F;
 
-    public void sayName() {
-        System.out.println(name);
-    }
+    public static String commonName = "Кошки";
 
-    public void sayBreed() {
-        System.out.println(breed + " порода");
-    }
+    private int age;
+    private int year;
+    private int date;
+    private float weight;
+    private String month;
+    private String name;
+    private String breed;
 
-    public void sayAge() {
-        System.out.println(age);
-    }
-
-    public void sayWight() {
-        System.out.println(weight);
-    }
-
-    public void sayDateOfBirth() {
-        String DateOfBirth = date +" "+ month +" "+ year;
-        System.out.println(DateOfBirth);
+    public static void sayClassName() {
+        System.out.println(Cat.class.getName());
+        System.out.println(commonName);
     }
 
 
-    public static void main(String[] args) {
-        Cat varya = new Cat();
-        varya.sayName();
-        varya.sayAge();
-        varya.sayBreed();
-        varya.sayWight();
-        varya.sayDateOfBirth();
+    static class Eyes {
+        public static String color = "Серый";
+        static int quantity = 2;
+
+        public static void sayEyesParameter() {
+            System.out.println("Цвет глаз " + color);
+            System.out.println("Количество глаз " + quantity);
         }
-}
+    }
+
+    public int getDate() {
+        return date;
+    }
+
+    public void setDate(int date) {
+        this.date = date;
+    }
+
+    public float getWeight() {
+        return weight;
+    }
+
+    public void setWeight(float weight) {
+        if (weight >= 0) {
+            this.weight = weight;
+        }
+    }
+
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        if (breed.length() >= 0) {
+            this.breed = breed;
+        }
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age >= 0) {
+            this.age = age;
+        }
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        if (year >= 2000) {
+            this.year = year;
+        }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (name.length() >= 0) {
+            this.name = name;
+        }
+    }
+    }
+
+
