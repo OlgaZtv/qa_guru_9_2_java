@@ -1,13 +1,13 @@
 package olgaztv.github.io;
 
 public class Cat {
-    int age = 5;
-    int year = 2020;
-    int date = 5;
-    String month = "Октябрь";
-    String name = "Варвара";
-    String breed = "Аббисинская";
-    float weight = 4.01F;
+    int age;
+    int year;
+    int date;
+    String month;
+    String name;
+    String breed;
+    float weight;
 
     public void sayName() {
         System.out.println(name);
@@ -26,17 +26,37 @@ public class Cat {
     }
 
     public void sayDateOfBirth() {
-        String DateOfBirth = date +" "+ month +" "+ year;
+        String DateOfBirth = "День рождения: "+ date +" "+ month +" "+ year;
         System.out.println(DateOfBirth);
     }
 
 
     public static void main(String[] args) {
         Cat varya = new Cat();
+        Cat lera = new Cat();
+        varya.age = 1;
+        varya.year = 2020;
+        varya.date = 5;
+        varya.name = "Варвара";
+        varya.month = "Октябрь";
+        varya.breed = "Аббисинская";
+        varya.weight = 4.01F;
         varya.sayName();
         varya.sayAge();
         varya.sayBreed();
         varya.sayWight();
         varya.sayDateOfBirth();
+        lera.age = 2;
+        lera.year = 2021;
+        lera.date = 7;
+        lera.name = "Лера";
+        lera.month = "Январь";
+        lera.breed = "Бангальская";
+        lera.weight = 3.00F;
+        lera.sayName();
+        lera.sayAge();
+        lera.sayBreed();
+        lera.sayWight();
+        lera.sayDateOfBirth();
         }
 }

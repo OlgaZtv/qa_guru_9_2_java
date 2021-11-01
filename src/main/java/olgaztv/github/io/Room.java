@@ -3,13 +3,12 @@ package olgaztv.github.io;
 import java.util.Arrays;
 
 public class Room {
-    int length = 15;
-    int width  = 10;
-    int height  = 3;
-    int phone = 223315;
-    String[] appointment = new String[] {"Кухня", "Спальня", "Гостиная"};
-    String city = "Санкт-Петербург";
-    String street = "ул. Марата";
+    int length;
+    int width;
+    int height;
+    int phone;
+    String city;
+    String street;
 
     public void saySquare () {
         int Square = length * width;
@@ -30,19 +29,19 @@ public class Room {
         System.out.println(Address);
     }
 
-    public void sayAppointment() {
-             System.out.println(Arrays.toString(appointment));
-        }
-
-
-
+    
     public static void main(String[] args) {
-        Room room = new Room();
-        room.saySquare();
-        room.saySize();
-        room.sayPhone();
-        room.sayAddress();
-        room.sayAppointment();
+        Room komnata = new Room();
+        komnata.length = 15;
+        komnata.width = 10;
+        komnata.height = 3;
+        komnata.phone = 223315;
+        komnata.city = "Санкт-Петербург";
+        komnata.street = "ул. Марата";
+        komnata.saySquare();
+        komnata.saySize();
+        komnata.sayPhone();
+        komnata.sayAddress();
     }
 }
 
