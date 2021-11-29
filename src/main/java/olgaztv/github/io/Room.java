@@ -1,7 +1,5 @@
 package olgaztv.github.io;
 
-import java.util.Arrays;
-
 public class Room {
     int length;
     int width;
